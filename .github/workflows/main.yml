@@ -1,5 +1,5 @@
 name: Go Test with Postgres
-
+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
 on: [push]
 
 jobs:
@@ -30,9 +30,8 @@ jobs:
         run: |
           go build
           go test -v ./...
-
-      - name: Run application and test database
-        run: |
-          go test -v ./...
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          DATABASE_URL: postgres://postgres:password@localhost:5432/postgres
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
