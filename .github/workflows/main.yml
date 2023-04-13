@@ -33,9 +33,6 @@ jobs:
 
       - name: Run application and test database
         run: |
-          docker-compose up -d
-          go run main.go &
-          sleep 5s
           go test -v ./...
         env:
           DATABASE_URL: postgres://postgres:password@localhost:5432/postgres
