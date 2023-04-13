@@ -1,4 +1,4 @@
-BINARY_NAME=CICDEX02
+BINARY_NAME=blockchainsblockchains1
 
 all: test build
 
