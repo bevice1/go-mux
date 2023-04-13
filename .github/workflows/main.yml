@@ -13,6 +13,7 @@ jobs:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: geheim
           POSTGRES_DB: postgres
+
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -35,4 +36,4 @@ jobs:
         with:
           organization: bevice1
           projectKey: go-mux
-          token: ${{ env.SONAR_TOKEN }}
+          token: ${{ secrets.SONAR_TOKEN }}
