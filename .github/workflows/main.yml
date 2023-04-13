@@ -34,7 +34,10 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
+          organization: bevice1
+          projectKey: go-mux
           args: -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
