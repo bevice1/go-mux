@@ -1,5 +1,5 @@
 name: Go Test with Postgres
-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
+
 on: [push]
 
 jobs:
